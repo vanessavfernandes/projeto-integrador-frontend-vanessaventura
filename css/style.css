@@ -436,3 +436,97 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
 }
+/* ==========================================================================
+   AULA 11: ESTILOS DA ANÁLISE DINÂMICA VIA DOM E CLASSES DE FAIXA
+   ========================================================================== */
+.grade-analise-dom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item-analise-mdf {
+    background-color: #ffffff;
+    border: 1px solid var(--cor-borda-suave);
+    border-left-width: 6px;
+    border-radius: var(--raio-borda);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.item-analise-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.item-analise-topo h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.selo-faixa {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* Classes controladas pelo JavaScript via classList.add */
+.faixa-economico {
+    border-left-color: #2e7d32;
+}
+.faixa-economico .selo-faixa {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+.faixa-intermediario {
+    border-left-color: #b26a00;
+}
+.faixa-intermediario .selo-faixa {
+    background-color: #fff3e0;
+    color: #8d4e00;
+}
+
+.faixa-premium {
+    border-left-color: #6d3b24;
+}
+.faixa-premium .selo-faixa {
+    background-color: #f3e5dc;
+    color: #4a2514;
+}
+
+.item-analise-estoque {
+    font-size: 0.875rem;
+    color: #5a4a3f;
+}
+
+.caixa-resumo-dom {
+    margin-top: 1.25rem;
+    padding: 0.9rem 1rem;
+    background-color: #f4ebe1;
+    border: 1px solid var(--cor-mdf-natural);
+    border-radius: var(--raio-borda);
+    font-weight: 600;
+}
+
+.grade-categorias-dom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.bloco-categoria-mdf {
+    background-color: #faf6f1;
+    border: 1px dashed var(--cor-borda-suave);
+    border-radius: var(--raio-borda);
+    padding: 0.75rem;
+    font-size: 0.875rem;
+}
