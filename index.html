@@ -14,47 +14,32 @@
         <p>Este catálogo digital tem como objetivo centralizar o mostruário de peças decorativas em MDF sob medida, facilitando a visualização por categorias e agilizando a solicitação de orçamentos online.</p>
     </header>
 
+    <nav class="navbar" aria-label="Navegação principal do catálogo">
+        <ul class="navbar-links">
+            <li><a href="#categorias">Categorias e Medidas</a></li>
+            <li><a href="#mostruario">Mostruário em Destaque</a></li>
+            <li><a href="#demonstracao">Corte a Laser</a></li>
+            <li><a href="#orcamento">Solicitar Orçamento</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section class="secao-card">
-            <h2>Categorias de Produtos</h2>
-            <ul class="lista-categorias">
-                <li>Quadros decorativos vazados em MDF</li>
-                <li>Letreiros decorativos com suporte</li>
-            </ul>
-
-            <h3>Tabela de Medidas e Modelos</h3>
-            <table class="tabela-modelos">
-                <thead>
-                    <tr>
-                        <th>Categoria / Modelo</th>
-                        <th>Dimensões Padrão</th>
-                        <th>Espessura do MDF</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Quadro Decorativo Vazado</td>
-                        <td>20cm x 30cm</td>
-                        <td>3mm</td>
-                    </tr>
-                    <tr>
-                        <td>Quadro Decorativo Grande</td>
-                        <td>50cm x 70cm</td>
-                        <td>3mm</td>
-                    </tr>
-                    <tr>
-                        <td>Letreiro Decorativo com Suporte</td>
-                        <td>25cm x 10cm</td>
-                        <td>2.5mm</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="secao-card galeria-mostruario">
+        <section id="mostruario" class="secao-card">
             <h2>Destaque do Mostruário</h2>
-            <img src="assets/images/letreiro-jesus.png" alt="Letreiro decorativo com suporte cortado a laser em MDF">
-            <img src="assets/images/quadro-ciclista.png" alt="Quadro decorativo vazado cortado a laser em MDF">
+
+            <div class="grade-produtos">
+                <article class="card-produto">
+                    <img src="assets/images/letreiro-jesus.png" alt="Letreiro personalizado com suporte cortado a laser em MDF">
+                    <h3>Letreiros Personalizados com Suporte</h3>
+                    <p>Corte a laser de alta precisão em MDF 2.5mm com base encaixável sob medida para mesas, aparadores e decoração (25cm x 10cm).</p>
+                </article>
+
+                <article class="card-produto">
+                    <img src="assets/images/quadro-ciclista.png" alt="Quadro decorativo vazado cortado a laser em MDF">
+                    <h3>Quadros Decorativos Vazados em MDF</h3>
+                    <p>Design geométrico vazado em MDF 3mm com acabamento fosco, ideal para salas, quartos e escritórios (20cm x 30cm e 50cm x 70cm).</p>
+                </article>
+            </div>
 
             <h3>Referência e Inspiração</h3>
             <p class="destaque">
@@ -63,14 +48,14 @@
             </p>
         </section>
 
-        <section class="secao-card">
+        <section id="demonstracao" class="secao-card">
             <h2>Demonstração de Produção e Corte a Laser</h2>
             <p>Acompanhe uma breve demonstração do processo de corte a laser utilizado na fabricação dos nossos quadros e letreiros em MDF.</p>
 
             <!-- Estratégia de preload="metadata": o vídeo está posicionado abaixo da dobra inicial da página,
                  carregando apenas os metadados (duração, dimensões e primeiro quadro) para economizar
                  banda até que o visitante decida iniciar a reprodução. -->
-            <video controls poster="assets/images/letreiro-jesus.png" preload="metadata">
+            <video controls poster="assets/images/maquina-poster.png" preload="metadata">
                 <source src="assets/videos/maquina-laser.webm" type="video/webm">
                 <source src="assets/videos/maquina-laser.mp4" type="video/mp4">
                 <track src="assets/videos/legendas-corte.vtt" kind="subtitles" srclang="pt" label="Português" default>
@@ -78,7 +63,7 @@
             </video>
         </section>
 
-        <section class="secao-card">
+        <section id="orcamento" class="secao-card">
             <h2>Solicitação de Orçamento Sob Medida</h2>
             <form action="#" method="post">
                 <fieldset>

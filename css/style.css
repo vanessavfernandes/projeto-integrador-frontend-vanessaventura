@@ -22,6 +22,7 @@
    ========================================================================== */
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +38,6 @@ body {
     color: var(--cor-fundo-card);
     padding: 2rem var(--espacamento-padrao);
     text-align: center;
-    border-bottom: 0.25rem solid var(--cor-mdf-natural);
 }
 
 #cabecalho-principal h1 {
@@ -49,6 +49,48 @@ body {
     max-width: 48rem;
     margin: 0 auto;
     font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   Barra de Navegação com Flexbox (Aula 07 - Passo 1)
+   ========================================================================== */
+.navbar {
+    background-color: #462b17;
+    border-bottom: 0.25rem solid var(--cor-mdf-natural);
+    padding: 0.75rem var(--espacamento-padrao);
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a:link,
+.navbar-links a:visited {
+    display: inline-block;
+    color: var(--cor-fundo-card);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--raio-borda);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Estados interativos :hover e :focus-visible nos links da navbar */
+.navbar-links a:hover,
+.navbar-links a:focus-visible {
+    background-color: var(--cor-mdf-natural);
+    color: var(--cor-texto-principal);
+    transform: translateY(-0.125rem);
+    outline: 2px solid var(--cor-fundo-card);
+    outline-offset: 2px;
 }
 
 /* Combinador filho direto (main > section):
@@ -82,6 +124,59 @@ main > section {
     color: var(--cor-madeira-escura);
     font-size: 1.2rem;
     margin-top: var(--espacamento-padrao);
+}
+
+/* ==========================================================================
+   Grade Responsiva com CSS Grid e Pseudo-classes Estruturais 
+   ========================================================================== */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--espacamento-padrao);
+    margin: var(--espacamento-padrao) 0;
+}
+
+.card-produto {
+    background-color: var(--cor-fundo-pagina);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: var(--raio-borda);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(43, 33, 24, 0.12);
+}
+
+/* Pseudo-classes estruturais (:first-child e :nth-child) para diferenciar itens da grade */
+.card-produto:first-child {
+    border: 2px solid var(--cor-mdf-natural);
+}
+
+.card-produto:nth-child(even) {
+    background-color: #f4ebe1;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: var(--raio-borda);
+    border: 1px solid var(--cor-borda-suave);
+    margin-bottom: 0.75rem;
+}
+
+.card-produto h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.card-produto p {
+    margin: 0;
+    font-size: 0.95rem;
 }
 
 /* Classe reutilizável 2: Destaque visual para chamadas e avisos */
@@ -129,41 +224,33 @@ main > section {
     background-color: var(--cor-fundo-pagina);
 }
 
-/* Imagens e Vídeo responsivos dentro dos cards */
-.galeria-mostruario img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid var(--cor-borda-suave);
-    border-radius: var(--raio-borda);
-    margin: 0.5rem 0.5rem 0.5rem 0;
-}
-
 video {
+    display: block;
     max-width: 100%;
     border-radius: var(--raio-borda);
     border: 1px solid var(--cor-borda-suave);
-    margin-top: var(--espacamento-pequeno);
+    margin: var(--espacamento-pequeno) auto 0 auto;
 }
 
 /* ==========================================================================
    Estados de Link na ordem LoVe / HAte (Link, Visited, Hover, Active)
    ========================================================================== */
-a:link {
+main a:link {
     color: var(--cor-madeira-escura);
     font-weight: 600;
     text-decoration: underline;
 }
 
-a:visited {
+main a:visited {
     color: #7d4e2d;
 }
 
-a:hover {
+main a:hover {
     color: #a86432;
     text-decoration: none;
 }
 
-a:active {
+main a:active {
     color: #3d2412;
 }
 
@@ -209,12 +296,14 @@ textarea {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .botao:hover {
     background-color: var(--cor-mdf-natural);
     border-color: var(--cor-mdf-natural);
     color: var(--cor-texto-principal);
+    transform: translateY(-0.125rem);
 }
 
 /* Rodapé */
