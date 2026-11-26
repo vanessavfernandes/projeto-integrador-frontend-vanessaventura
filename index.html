@@ -14,12 +14,25 @@
         <p>Este catálogo digital tem como objetivo centralizar o mostruário de peças decorativas em MDF sob medida, facilitando a visualização por categorias e agilizando a solicitação de orçamentos online.</p>
     </header>
 
-    <nav class="navbar" aria-label="Navegação principal do catálogo">
+   <nav class="navbar" aria-label="Navegação principal">
+        <a href="#topo" class="navbar-marca">Ateliê MDF &bull; Catálogo</a>
+
+        <button type="button" class="btn-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false">
+            <span class="linha-hamburguer"></span>
+            <span class="linha-hamburguer"></span>
+            <span class="linha-hamburguer"></span>
+        </button>
+
         <ul class="navbar-links">
-            <li><a href="#categorias">Categorias e Medidas</a></li>
-            <li><a href="#mostruario">Mostruário em Destaque</a></li>
+            <li class="item-dropdown">
+                <a href="#mostruario" class="ativo" aria-current="page" aria-haspopup="true">Mostruário &#9662;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#produto-letreiros">Letreiros com Suporte</a></li>
+                    <li><a href="#produto-quadros">Quadros Vazados em MDF</a></li>
+                </ul>
+            </li>
             <li><a href="#demonstracao">Corte a Laser</a></li>
-            <li><a href="#orcamento">Solicitar Orçamento</a></li>
+            <li><a href="#orcamento">Orçamento</a></li>
         </ul>
     </nav>
 
@@ -28,13 +41,13 @@
             <h2>Destaque do Mostruário</h2>
 
             <div class="grade-produtos">
-                <article class="card-produto">
+                <article id="produto-letreiros" class="card-produto">
                     <img src="assets/images/letreiro-jesus.png" alt="Letreiro personalizado com suporte cortado a laser em MDF">
                     <h3>Letreiros Personalizados com Suporte</h3>
                     <p>Corte a laser de alta precisão em MDF 2.5mm com base encaixável sob medida para mesas, aparadores e decoração (25cm x 10cm).</p>
                 </article>
 
-                <article class="card-produto">
+                <article id="produto-quadros" class="card-produto">
                     <img src="assets/images/quadro-ciclista.png" alt="Quadro decorativo vazado cortado a laser em MDF">
                     <h3>Quadros Decorativos Vazados em MDF</h3>
                     <p>Design geométrico vazado em MDF 3mm com acabamento fosco, ideal para salas, quartos e escritórios (20cm x 30cm e 50cm x 70cm).</p>
