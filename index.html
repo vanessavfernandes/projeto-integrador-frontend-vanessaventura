@@ -7,17 +7,20 @@
 </head>
 <body>
 
-    <h1>Catálogo de Quadros Decorativos e Letreiros Decorativos em MDF</h1>
+    <header>
+        <h1>Catálogo de Quadros Decorativos e Letreiros Decorativos em MDF</h1>
+        <p>Este catálogo digital tem como objetivo centralizar o mostruário de peças decorativas em MDF sob medida, facilitando a visualização por categorias e agilizando a solicitação de orçamentos online.</p>
+    </header>
 
-    <p>Este catálogo digital tem como objetivo centralizar o mostruário de peças decorativas em MDF sob medida, facilitando a visualização por categorias e agilizando a solicitação de orçamentos online.</p>
-
+    <main>
+        <section>
     <h2>Categorias de Produtos</h2>
     <ul>
         <li>Quadros decorativos vazados em MDF</li>
         <li>Letreiros decorativos com suporte</li>
     </ul>
 
-    <h2>Tabela de Medidas e Modelos</h2>
+    <h3>Tabela de Medidas e Modelos</h3>
     <table border="1">
         <thead>
             <tr>
@@ -44,7 +47,9 @@
             </tr>
         </tbody>
     </table>
+</section>
 
+<section>
     <h2>Destaque do Mostruário</h2>
     <img src="assets/images/letreiro-jesus.png" alt="Letreiro decorativo com suporte cortado a laser em MDF" width="350">
     <img src="assets/images/quadro-ciclista.png" alt="Quadro decorativo vazado cortado a laser em MDF" width="350">
@@ -53,6 +58,47 @@
         Confira mais referências de decoração e tendências no 
         <a href="https://br.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest Brasil</a>.
     </p>
+
+<section>
+            <h2>Solicitação de Orçamento Sob Medida</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Dados do Cliente e Especificações do Pedido</legend>
+
+                    <p>
+                        <label for="cliente-nome">Nome completo:</label><br>
+                        <input type="text" id="cliente-nome" name="nome" required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="cliente-email">E-mail para envio do orçamento:</label><br>
+                        <input type="email" id="cliente-email" name="email" required>
+                    </p>
+
+                    <p>
+                        <label for="cliente-whatsapp">WhatsApp (apenas números com DDD, ex: 83999999999):</label><br>
+                        <input type="tel" id="cliente-whatsapp" name="whatsapp" pattern="[0-9]{11}" required>
+                    </p>
+
+                    <p>
+                        <label for="pedido-quantidade">Quantidade de peças (1 a 3000):</label><br>
+                        <input type="number" id="pedido-quantidade" name="quantidade" min="1" max="3000" value="1" required>
+                    </p>
+
+                    <p>
+                        <label for="pedido-detalhes">Descrição da peça, medidas ou texto desejado:</label><br>
+                        <textarea id="pedido-detalhes" name="detalhes" rows="4" cols="40" required></textarea>
+                    </p>
+
+                    <button type="submit">Solicitar Orçamento</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Catálogo Digital de Produtos em MDF - Projeto Integrador Front-End (UNIPÊ)</p>
+    </footer>
 
 </body>
 </html>
