@@ -4,109 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Digital - Quadros Decorativos e Letreiros Decorativos em MDF</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
+    <header id="cabecalho-principal">
         <h1>Catálogo de Quadros Decorativos e Letreiros Decorativos em MDF</h1>
         <p>Este catálogo digital tem como objetivo centralizar o mostruário de peças decorativas em MDF sob medida, facilitando a visualização por categorias e agilizando a solicitação de orçamentos online.</p>
     </header>
 
     <main>
-        <section>
-    <h2>Categorias de Produtos</h2>
-    <ul>
-        <li>Quadros decorativos vazados em MDF</li>
-        <li>Letreiros decorativos com suporte</li>
-    </ul>
+        <section class="secao-card">
+            <h2>Categorias de Produtos</h2>
+            <ul class="lista-categorias">
+                <li>Quadros decorativos vazados em MDF</li>
+                <li>Letreiros decorativos com suporte</li>
+            </ul>
 
-    <h3>Tabela de Medidas e Modelos</h3>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Categoria / Modelo</th>
-                <th>Dimensões Padrão</th>
-                <th>Espessura do MDF</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Quadro Decorativo Vazado</td>
-                <td>20cm x 30cm</td>
-                <td>3mm</td>
-            </tr>
-            <tr>
-                <td>Quadro Decorativo Grande</td>
-                <td>50cm x 70cm</td>
-                <td>3mm</td>
-            </tr>
-            <tr>
-                <td>Letreiro Decorativo com Suporte</td>
-                <td>25cm x 10cm</td>
-                <td>2.5mm</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <h3>Tabela de Medidas e Modelos</h3>
+            <table class="tabela-modelos">
+                <thead>
+                    <tr>
+                        <th>Categoria / Modelo</th>
+                        <th>Dimensões Padrão</th>
+                        <th>Espessura do MDF</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Quadro Decorativo Vazado</td>
+                        <td>20cm x 30cm</td>
+                        <td>3mm</td>
+                    </tr>
+                    <tr>
+                        <td>Quadro Decorativo Grande</td>
+                        <td>50cm x 70cm</td>
+                        <td>3mm</td>
+                    </tr>
+                    <tr>
+                        <td>Letreiro Decorativo com Suporte</td>
+                        <td>25cm x 10cm</td>
+                        <td>2.5mm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-<section>
-    <h2>Destaque do Mostruário</h2>
-    <img src="assets/images/letreiro-jesus.png" alt="Letreiro decorativo com suporte cortado a laser em MDF" width="350">
-    <img src="assets/images/quadro-ciclista.png" alt="Quadro decorativo vazado cortado a laser em MDF" width="350">
-    <h2>Referência e Inspiração</h2>
-    <p>
-        Confira mais referências de decoração e tendências no 
-        <a href="https://br.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest Brasil</a>.
-    </p>
+        <section class="secao-card galeria-mostruario">
+            <h2>Destaque do Mostruário</h2>
+            <img src="assets/images/letreiro-jesus.png" alt="Letreiro decorativo com suporte cortado a laser em MDF">
+            <img src="assets/images/quadro-ciclista.png" alt="Quadro decorativo vazado cortado a laser em MDF">
 
-</section>
-<section>
+            <h3>Referência e Inspiração</h3>
+            <p class="destaque">
+                Confira mais referências de decoração e tendências no 
+                <a href="https://br.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest Brasil</a>.
+            </p>
+        </section>
+
+        <section class="secao-card">
             <h2>Demonstração de Produção e Corte a Laser</h2>
             <p>Acompanhe uma breve demonstração do processo de corte a laser utilizado na fabricação dos nossos quadros e letreiros em MDF.</p>
 
             <!-- Estratégia de preload="metadata": o vídeo está posicionado abaixo da dobra inicial da página,
                  carregando apenas os metadados (duração, dimensões e primeiro quadro) para economizar
                  banda até que o visitante decida iniciar a reprodução. -->
-            <video controls width="500" poster="assets/images/letreiro-jesus.png" preload="metadata">
+            <video controls poster="assets/images/letreiro-jesus.png" preload="metadata">
                 <source src="assets/videos/maquina-laser.webm" type="video/webm">
                 <source src="assets/videos/maquina-laser.mp4" type="video/mp4">
                 <track src="assets/videos/legendas-corte.vtt" kind="subtitles" srclang="pt" label="Português" default>
                 Seu navegador não suporta a reprodução de vídeo HTML5.
             </video>
-</section>
+        </section>
 
-<section>
+        <section class="secao-card">
             <h2>Solicitação de Orçamento Sob Medida</h2>
             <form action="#" method="post">
                 <fieldset>
                     <legend>Dados do Cliente e Especificações do Pedido</legend>
 
                     <p>
-                        <label for="cliente-nome">Nome completo:</label><br>
+                        <label for="cliente-nome">Nome completo:</label>
                         <input type="text" id="cliente-nome" name="nome" required minlength="3">
                     </p>
 
                     <p>
-                        <label for="cliente-email">E-mail para envio do orçamento:</label><br>
+                        <label for="cliente-email">E-mail para envio do orçamento:</label>
                         <input type="email" id="cliente-email" name="email" required>
                     </p>
 
                     <p>
-                        <label for="cliente-whatsapp">WhatsApp (apenas números com DDD, ex: 83999999999):</label><br>
+                        <label for="cliente-whatsapp">WhatsApp (apenas números com DDD, ex: 83999999999):</label>
                         <input type="tel" id="cliente-whatsapp" name="whatsapp" pattern="[0-9]{11}" required>
                     </p>
 
                     <p>
-                        <label for="pedido-quantidade">Quantidade de peças (1 a 3000):</label><br>
+                        <label for="pedido-quantidade">Quantidade de peças (1 a 3000):</label>
                         <input type="number" id="pedido-quantidade" name="quantidade" min="1" max="3000" value="1" required>
                     </p>
 
                     <p>
-                        <label for="pedido-detalhes">Descrição da peça, medidas ou texto desejado:</label><br>
-                        <textarea id="pedido-detalhes" name="detalhes" rows="4" cols="40" required></textarea>
+                        <label for="pedido-detalhes">Descrição da peça, medidas ou texto desejado:</label>
+                        <textarea id="pedido-detalhes" name="detalhes" rows="4" required></textarea>
                     </p>
 
-                    <button type="submit">Solicitar Orçamento</button>
+                    <button type="submit" class="botao">Solicitar Orçamento</button>
                 </fieldset>
             </form>
         </section>
